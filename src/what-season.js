@@ -14,10 +14,10 @@ const {checkForThrowingErrors} = require("../extensions");
  */
 function getSeason(date) {
   if (!date ) {
-    throw new NotImplementedError('Unable to determine the time of year!');
+    return 'Unable to determine the time of year!';
   }
-  if (Object.prototype.toString.call(date) !== '[object Date]' || typeof date === 'symbol' || !date.hasOwnProperty(toString)) {
-    throw new NotImplementedError('Invalid date!');
+  if (!(date instanceof Date) || date[Symbol.toStringTag] === 'Date') {
+    throw new Error('Invalid date!');
   }
   let season = ''
   let month = date.getMonth();
