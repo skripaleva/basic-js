@@ -31,7 +31,7 @@ class VigenereCipheringMachine {
     }
   }
   encrypt(text, key) {
-    if (arguments.length < 2) throw new NotImplementedError('Incorrect arguments!');
+    if (!text || !key) throw new Error('Incorrect arguments!');
     this.getObject()
     let res = ''
     let count = 0;
@@ -52,7 +52,7 @@ class VigenereCipheringMachine {
     return res;
   }
   decrypt(text, key) {
-    if (arguments.length < 2) throw new NotImplementedError('Incorrect arguments!');
+    if (!text || !key) throw new Error('Incorrect arguments!');
     this.getObject()
     let res = ''
     let count = 0;
