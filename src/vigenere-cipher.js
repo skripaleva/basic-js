@@ -77,12 +77,6 @@ module.exports = {
   VigenereCipheringMachine
 };
 
-const directMachine = new VigenereCipheringMachine();
-// console.log(directMachine.decrypt('AEIHQX SX DLLU!', 'alphonse'))
-
-const reverseMachine = new VigenereCipheringMachine(true);
-reverseMachine.encrypt('attack at dawn!', 'alphonse')
-console.log(reverseMachine.decrypt('AEIHQX SX DLLU!', 'alphonse') )
 
 
 
