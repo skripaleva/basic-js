@@ -31,7 +31,6 @@ class VigenereCipheringMachine {
     }
   }
   encrypt(text, key) {
-    console.log(this.reverse)
     if (arguments.length < 2) throw new NotImplementedError('Incorrect arguments!');
     this.getObject()
     let res = ''
