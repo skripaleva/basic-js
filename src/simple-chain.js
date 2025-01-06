@@ -14,9 +14,9 @@ const chainMaker = {
     return this;
   },
   removeLink(position) {
-    if (!Number.isInteger(position)) {
+    if (isNaN(position) || !this.arr[position - 1]) {
       this.arr = [];
-      throw new NotImplementedError('You can\'t remove incorrect link!');
+      throw new Error("You can't remove incorrect link!");
     }
     this.arr.splice(position - 1, 1);
     return this
